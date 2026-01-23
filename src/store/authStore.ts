@@ -12,6 +12,7 @@ interface AuthState {
     user: User | null;
     token: string | null;
     setAuth: (user: User, token: string) => void;
+    login: (token: string, user: User) => void;
     logout: () => void;
 }
 
@@ -20,6 +21,10 @@ export const useAuthStore = create<AuthState>((set) => ({
     token: Cookies.get('token') || null,
     setAuth: (user, token) => {
         Cookies.set('token', token, { expires: 7 }); // 7 Days
+        set({ user, token });
+    },
+    login: (token, user) => {
+        Cookies.set('token', token, { expires: 7 });
         set({ user, token });
     },
     logout: () => {

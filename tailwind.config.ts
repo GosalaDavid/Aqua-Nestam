@@ -9,12 +9,14 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: "#2F80ED", // Blue
-                success: "#22C55E", // Green
-                light: "#EAF2FF",   // Light Blue BG
-                page: "#F5F7FA",    // Page BG
-                dark: "#1F2937",    // Text Dark
-                muted: "#6B7280",   // Text Muted
+                primary: "#FF6B4A", // Coral/Orange
+                secondary: "#FFF0EB", // Light Peach/Orange
+                success: "#22C55E", // Success Green
+                error: "#EF4444",   // Error Red
+                light: "#FDFDFD",   // Background
+                page: "#F9FAFB",    // Page BG (Cool Gray)
+                dark: "#1A1A1A",    // Text Dark
+                muted: "#888888",   // Text Muted
             },
         },
     },
